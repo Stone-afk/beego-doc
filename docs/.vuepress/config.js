@@ -18,7 +18,7 @@ module.exports = {
     "/": {
       lang: "en-US",
       title: "Beego",
-      description: "The most easy use framework",
+      description: "The easiest to use framework",
     },
     "/zh/": {
       lang: "zh-CN",
@@ -64,13 +64,15 @@ module.exports = {
             ariaLabel: "Version",
             items: [
               {text: 'developing', link: '/en-US/developing/'},
-              { text: "v2.0.x", link: "/en-US/v2.0.x/" }
+              { text: "v2.0.x", link: "/en-US/v2.0.x/" },
+              { text: "v2.1.0", link: "/en-US/v2.1.0/" }
             ],
           },
         ],
         sidebar: {
           "/en-US/developing/": buildVersionSideBarEn("developing"),
-          "/en-US/v2.0.2/": buildVersionSideBarEn("v2.0.x"),
+          "/en-US/v2.0.x/": buildVersionSideBarEn("v2.0.x"),
+          "/en-US/v2.1.0/": buildVersionSideBarEn("v2.1.0"),
         },
       },
       "/zh/": {
@@ -80,13 +82,15 @@ module.exports = {
             ariaLabel: "Version",
             items: [
               { text: "developing", link: "/zh/developing/" },
-              {text: 'v2.0.x', link: '/zh/v2.0.x/'}
+              {text: 'v2.0.x', link: '/zh/v2.0.x/'},
+              {text: 'v2.1.0', link: '/zh/v2.1.0/'}
             ],
           },
         ],
         sidebar: {
           "/zh/developing/": buildVersionSideBar("developing"),
           "/zh/v2.0.x/": buildVersionSideBar("v2.0.x"),
+          "/zh/v2.1.0/": buildVersionSideBar("v2.1.0"),
         },
       },
     },
@@ -167,9 +171,9 @@ function buildVersionSideBarEn() {
     {
       title: "Q & A",
       collapsable: true,
-      sidebarDepth: 1,
+      sidebarDepth: 0,
       children: [
-        ["qa/", "QA"],
+        ["qa/", "Q&A and FAQ"],
         "qa/failed_to_start_web_server",
         // 'writing-a-theme',
         // 'option-api',
@@ -245,6 +249,7 @@ function buildVersionSideBar() {
       collapsable: true,
       sidebarDepth: 0,
       children: [
+        "cache/",
         "cache/cache_pattern.md"
       ],
     },
